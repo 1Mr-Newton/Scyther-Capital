@@ -6,6 +6,26 @@ app = Flask(__name__)
 def homepage():
   return render_template('index.html')
 
-if __name__ == "__main__":
-  app.run(debug=True)
+
+@app.route('/signup',methods=['POST', 'GET'])
+def signup():
+  return render_template('signup.html')
+
+
+@app.route('/login',methods=['POST', 'GET'])
+def login():
+  return render_template('login.html')
+
+@app.route('/forgotpassword',methods=['POST', 'GET'])
+def forgotPassword():
+  return render_template('forgotpassword.html')
+
+
+
+
+
+
+
+
+if __name__ == "__main__":app.run(debug=True)
   
