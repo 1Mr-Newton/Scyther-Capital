@@ -24,6 +24,14 @@ def forgotPassword():
 
 
 
+@app.route('/dashboard',methods=['POST', 'GET'])
+def dashboard():
+  return render_template('dashboard.html')
+
+
+
+
+
 
 
 
